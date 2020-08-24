@@ -1,0 +1,265 @@
+/*body{
+	/*background-color: #310e68;
+background-image: linear-gradient(316deg, #310e68 0%, #5f0f40 74%);
+}//
+background-color: #9ab5e1;
+background-image: linear-gradient(315deg, #9ab5e1 0%, #f39fdc 74%);
+
+height:100vh;
+width: 100vw;
+}*/
+
+body {
+	background: linear-gradient(-45deg, #ee7752  , #e73c7e , #23a6d5 , #23d5ab , #9ab5e1 , #f39fdc );
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height:100vh;
+    width: 100vw;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+#todolist-card {
+	height: unset;
+	width: 50vw;
+	margin: 0 auto; 
+    float: none; 
+    margin-bottom: 10px;
+    max-width: 450px;
+
+}
+
+.container{
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+ }
+
+
+ /* Include the padding and border in an element's total width and height */
+* {
+  box-sizing: border-box;
+}
+
+/* Remove margins and padding from the list */
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+/* Style the list items */
+ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  background: #FCE4EC;
+  font-size: 18px;
+  transition: 0.2s;
+
+
+  /* make the list items unselectable */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Set all odd list items to a different color (zebra-stripes) */
+ul li:nth-child(odd) {
+	 background: #F8BBD0;
+	 
+	 
+  /*background-color: #e96196;
+background-image: linear-gradient(315deg, #e96196 0%, #ffffff 74%);*/
+}
+
+/* Darker background-color on hover */
+ul li:hover {
+  background: #BDBDBD;
+
+
+}
+
+/* When clicked on, add a background color and strike out text */
+ul li.checked {
+  background: #888;
+  color: #fff;
+  text-decoration: line-through;
+}
+
+/* Add a "checked" mark when clicked on */
+ul li.checked::before {
+  content: '';
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 14px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+  
+}
+
+/* Style the close button */
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+  margin: 55px 10px 0px 10px;
+}
+
+li .close:hover {
+ 
+  color:#B71C1C;
+}
+
+/* Style the header */
+.header {
+  background-color: #f44336;
+  padding: 30px 40px;
+  color: white;
+  text-align: center;
+}
+
+/* Clear floats after the header */
+.header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the input */
+input {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 75%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+}
+
+/* Style the "Add" button */
+.addBtn {
+  padding: 10px;
+  width: 25%;
+  background-color: #b1bfd8;
+  background-image: linear-gradient(315deg, #b1bfd8 0%, #6782b4 74%);
+  color: white;
+  float: left;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 5px;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.addBtn:hover {
+  background-color: #d3d3d3;
+background-image: linear-gradient(315deg, #d3d3d3 0%, #57606f 74%);
+
+
+}
+
+.card-body{
+	  background-color: #b1bfd8;
+background-image: linear-gradient(315deg, #b1bfd8 0%, #6782b4 74%);
+ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	
+}
+
+#myInput{
+	background-color: #d9d9d9;
+background-image: linear-gradient(315deg, #d9d9d9 0%, #f6f2f2 74%);
+ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+ border-radius: 5px;
+}
+
+.card-title{
+	font-family: 'Bangers', cursive;
+	letter-spacing: 0.1em;
+	opacity: 0.8;
+	text-align: center;
+	
+	text-shadow: 0.7px 0.5px 1px #000000;
+}
+
+
+@keyframes up {
+  0% {
+  opacity: 0;
+  }
+  10%, 90% {
+  opacity: 1;
+  }
+  100% {
+  opacity: 0;
+  transform: translateY(-1024px);
+  }
+}
+
+
+@keyframes up {
+  0% {
+  opacity: 0;
+  }
+  10%, 90% {
+  opacity: 1;
+  }
+  100% {
+  opacity: 0;
+  transform: translateY(-1024px);
+  }
+}
+
+li{
+	display: flex;
+    flex-direction: column;
+}
+
+
+.notify-button {
+  padding: 10px;
+  background-color: #b1bfd8;
+  background-image: linear-gradient(315deg, #b1bfd8 0%, #6782b4 74%);
+  color: white;
+  float: left;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 5px;
+  border: 2px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: 2px 0px 0px 20px;
+}
+
+.notify-button:hover {
+  background-color: #d3d3d3;
+background-image: linear-gradient(315deg, #d3d3d3 0%, #57606f 74%);
+
+
+}
+
+
+div.date-time input {
+	width: 50%;
+	border-radius: 5px;
+}
